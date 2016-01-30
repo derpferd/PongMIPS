@@ -1,5 +1,7 @@
 # PongMIPS
 
+PongMIPS is an implementation of the classic game of Pong. This was just a project I did for fun and to learn MIPS.
+
 ## Building and running
 
  - Download repo
