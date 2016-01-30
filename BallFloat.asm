@@ -233,12 +233,12 @@ tick:
 	swc1	$f1, 24($t0)
 	
 	
-	mov.s	$f12, $f1
-	li		$v0, 2
-	syscall
-	la		$a0, newLine
-	li		$v0, 4
-	syscall
+#	mov.s	$f12, $f1
+#	li		$v0, 2
+#	syscall
+#	la		$a0, newLine
+#	li		$v0, 4
+#	syscall
 	
 	b		hitx
 
@@ -293,12 +293,12 @@ nohittoc:
 	swc1	$f1, 24($t0)
 	
 	
-	mov.s	$f12, $f1
-	li		$v0, 2
-	syscall
-	la		$a0, newLine
-	li		$v0, 4
-	syscall
+#	mov.s	$f12, $f1
+#	li		$v0, 2
+#	syscall
+#	la		$a0, newLine
+#	li		$v0, 4
+#	syscall
 	
 	b		hitx
 
@@ -449,6 +449,3 @@ reset:
 	lw      $ra, 0($sp)     # restore return address
 	add     $sp, $sp, 4     # and deallocate it
 	jr		$ra
-
-
-

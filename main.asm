@@ -31,8 +31,9 @@
 		bgColor:	.word 0	# black
 		
 		# MSGs
-		cLosesMsg: .asciiz "You win!!!"
-		pLosesMsg: .asciiz "The Computer bested you. :P"
+		cLosesMsg:	.asciiz "You win!!!"
+		pLosesMsg:	.asciiz "The Computer bested you. :P"
+		newLine:	.asciiz "\n"
 	
 	.text
 
@@ -226,7 +227,7 @@ gameLoopTop:
     lw		$t9, 4($a0)
     jalr	$t9
 	li		$t7, 113	# q for quit
-	beq 	$v0, $t7, gameLoopEnd
+	beq 	$v0, $t7, quit
 	
 	li		$t7, 119	# w for up
 	beq		$v0, $t7, wkey
@@ -254,16 +255,25 @@ endkeys:
 cLoses:
 	la		$a0, cLosesMsg
 	li		$v0, 4
+	syscall	
+	la		$a0, newLine
+	li		$v0, 4
 	syscall
+
 	b		gameLoopEnd
 pLoses:
 	la		$a0, pLosesMsg
+	li		$v0, 4
+	syscall
+	la		$a0, newLine
 	li		$v0, 4
 	syscall
 
 gameLoopEnd:
 	
 	b		startGame
+
+quit:
     
     li      $v0, 10         # terminate the program
     syscall
