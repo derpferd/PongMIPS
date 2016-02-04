@@ -1,11 +1,11 @@
 # PongMIPS
 
-PongMIPS is an implementation of the classic game of Pong. This was just a project I did for fun and to learn MIPS.
+PongMIPS is an implementation of the classic game of Pong. This was a project I did just for fun which included learning MIPS.
 
 ## Building and running
 
  - Download repo
- - Open Mars4_4_no_ide.jar (under mars) using java
+ - Open Mars4_4_no_ide.jar (under the "mars" directory) using java
  - Under "Application Control" click "Open MIPS program..."
  - Navigate to and open "main.asm".
  - Under "Application Control" click "Assemble and Run"
